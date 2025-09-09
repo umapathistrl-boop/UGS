@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio - Dark Theme</title>
+  <style>
+    /* ===== Smooth Scroll ===== */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ===== Global Dark Theme ===== */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #0d1b2a;
+      color: #f5f5f5;
+    }
+
+    /* ===== Navbar ===== */
+    nav {
+      background: #1b263b;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    nav a {
+      color: #fca311;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* ===== Header/Profile Section ===== */
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fca311;
+    }
+    header h1 {
+      margin: 15px 0 5px;
+    }
+    header p {
+      margin: 0 0 20px;
+      font-style: italic;
+      color: #fca311;
+    }
+
+    /* ===== Glowing Contact Button ===== */
+    .contact-btn {
+      background: #fca311;
+      color: #0d1b2a;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 10px #fca311, 0 0 20px #fca311 inset;
+    }
+    .contact-btn:hover {
+      background: #ffffff;
+      color: #0d1b2a;
+      box-shadow: 0 0 20px #fca311, 0 0 40px #fca311;
+      transform: scale(1.05);
+    }
+
+    /* ===== Section Styles ===== */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1b263b;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    section h2 {
+      color: #fca311;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* ===== Skills ===== */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .skill {
+      background: #fca311;
+      color: #0d1b2a;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Projects ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #f5f5f5;
+      color: #0d1b2a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .project-card h3 {
+      color: #fca311;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #fca311;
+      color: #0d1b2a;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .project-card a:hover {
+      background: #ffffff;
+      color: #0d1b2a;
+      box-shadow: 0 0 15px #fca311;
+    }
+
+    /* ===== Contact Form ===== */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #f5f5f5;
+      color: #0d1b2a;
+    }
+    button {
+      background: #fca311;
+      color: #0d1b2a;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 10px #fca311, 0 0 20px #fca311 inset;
+    }
+    button:hover {
+      background: #ffffff;
+      color: #0d1b2a;
+      box-shadow: 0 0 20px #fca311, 0 0 40px #fca311;
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #1b263b;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Navigation Bar ===== -->
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Header/Profile Section ===== -->
+  <header id="profile">
+    <img src="https://via.placeholder.com/120" alt="Profile Photo">
+    <h1>Gowthami</h1>
+    <p>Web Developer | Designer | Programmer</p>
+    <a href="#contact" class="contact-btn">Contact Me</a>
+  </header>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center;">
+      Hi, I’m [Gowthami]. I am passionate about building creative and user-friendly 
+      web applications. I enjoy turning ideas into reality using code and design.
+    </p>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">React</div>
+      <div class="skill">C / C++</div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A simple responsive website design.</p>
+        <a href="#">View</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>JavaScript-based quiz app with interactive UI.</p>
+        <a href="#">View</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Personal blog with CMS features.</p>
+        <a href="#">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="msg" style="text-align:center; color:#4caf50; margin-top:10px;"></p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+
+  <!-- ===== Contact Form Script ===== -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("msg").innerText = "Thanks! Your message has been sent.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
